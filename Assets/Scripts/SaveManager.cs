@@ -7,10 +7,10 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance { get; private set; }
 
-    //What we want to save
+    // What we want to save
     public int currentCar;
     public int money;
-    public bool[] carsUnlocked = new bool[6]{true, false, false, false, false, false};
+    public bool[] carsUnlocked = new bool[6] { true, false, false, false, false, false };
 
     private void Awake()
     {
@@ -25,33 +25,27 @@ public class SaveManager : MonoBehaviour
 
     public void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+        money = PlayerPrefs.GetInt("Money", 0);
+        currentCar = PlayerPrefs.GetInt("CurrentCar", 0);
+
+        carsUnlocked = new bool[6];
+        for (int i = 0; i < carsUnlocked.Length; i++)
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
-            PlayerData_Storage data = (PlayerData_Storage)bf.Deserialize(file);
-            money = data.money;
-            currentCar = data.currentCar;
-            carsUnlocked = data.carsUnlocked;
-            if(data.carsUnlocked == null){
-             carsUnlocked = new bool[6]{true, false, false, false, false, false};
-            }
-            
-            file.Close();
+            carsUnlocked[i] = PlayerPrefs.GetInt($"CarUnlocked_{i}", i == 0 ? 1 : 0) == 1;
         }
     }
 
     public void Save()
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-        PlayerData_Storage data = new PlayerData_Storage();
-        data.money = money;
-        data.currentCar = currentCar;
-        data.carsUnlocked = carsUnlocked;
-        bf.Serialize(file, data);
-        file.Close();
+        PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.SetInt("CurrentCar", currentCar);
+        for (int i = 0; i < carsUnlocked.Length; i++)
+        {
+            PlayerPrefs.SetInt($"CarUnlocked_{i}", carsUnlocked[i] ? 1 : 0);
+        }
+        PlayerPrefs.Save();
     }
+
 }
 
 [Serializable]

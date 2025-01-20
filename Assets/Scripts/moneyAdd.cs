@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class moneyAdd : MonoBehaviour
 {
-    public void Update(){
-       if(Input.GetKeyDown(KeyCode.E)){
+    public void AddMoney(){
            SaveManager.instance.money += 100;
            SaveManager.instance.Save();
-       }else if(Input.GetKeyDown(KeyCode.F))
-       { 
-           SaveManager.instance.money -= 100;
-           SaveManager.instance.Save();
        }
+       
+    public void SubMoney(){
+        SaveManager.instance.money -= 100;
+        SaveManager.instance.Save();
     }
 }
+

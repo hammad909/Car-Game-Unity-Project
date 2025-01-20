@@ -10,12 +10,6 @@ ScriptsOnlyBuild:
     - moneyCalculator
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -144,7 +138,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 14978}
+      Script: {instanceID: 27088}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
