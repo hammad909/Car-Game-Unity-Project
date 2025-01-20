@@ -81,11 +81,12 @@ GitHub: your-username
 Thank you for using this game solution repository! Enjoy building and playing your game!
 
 ##images
-![image](https://github.com/user-attachments/assets/9c32d7ae-5ce1-4299-a512-6577d917f448)
-![image](https://github.com/user-attachments/assets/1f4d1a31-0ceb-44b2-9764-bf74ddc72e95)
-![image](https://github.com/user-attachments/assets/9f64d8cd-18e4-44fa-bdd1-08dbffdae7cf)
-![image](https://github.com/user-attachments/assets/487553c5-6262-4d0d-b11b-7496ab5d7860)
-![image](https://github.com/user-attachments/assets/4767ae7a-f510-48fd-81c3-4d773c0236ef)
+![image](https://github.com/user-attachments/assets/646efd6f-e50a-4660-8cec-e65bdee31265)
+![image](https://github.com/user-attachments/assets/a01ca89f-373e-4547-9dd2-2bba5f1cb836)
+![image](https://github.com/user-attachments/assets/e65e7c56-af40-4af9-8eaa-1ec00e33d8b6)
+![image](https://github.com/user-attachments/assets/dfbf1d69-7208-47e1-91f7-d8b0d0762f6d)
+
+
 
 
 
